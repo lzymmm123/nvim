@@ -346,7 +346,29 @@ let g:table_mode_map_prefix = ' '
 let g:table_mode_corner = '|'
 " Use this option to define the delimiter which used by
 let g:table_mode_delimiter = ' '
+"let g:table_mode_fillchar = ' '
 let g:table_mode_syntax = 0
+
+
+
+autocmd FileType markdown inoremap <buffer> <silent> ,, <++>
+autocmd FileType markdown inoremap <buffer> <silent> ,f <Esc>/<++><CR>:nohl<CR>c4l
+autocmd FileType markdown inoremap <buffer> <silent> ,s <Esc>/ <++><CR>:nohl<CR>c5l
+autocmd FileType markdown inoremap <buffer> <silent> ,- ---
+autocmd FileType markdown nnoremap <buffer> <silent> ,, :TableModeRealign<CR>
+"function! s:isAtStartOfLine(mapping)
+  "let text_before_cursor = getline('.')[0 : col('.')-1]
+  "let mapping_pattern = '\V' . escape(a:mapping, '\')
+  "let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
+  "return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+"endfunction
+
+"inoreabbrev <expr> <bar><bar>
+          "\ <SID>isAtStartOfLine('\|\|') ?
+          "\ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+"inoreabbrev <expr> __
+          "\ <SID>isAtStartOfLine('__') ?
+          "\ '<c-o>:silent! TableModeDisable<cr>' : '__'
 
 
 
@@ -627,8 +649,8 @@ nnoremap <silent><nowait> <localleader>lw :<C-u>CocList words<cr>
 "floatterm
 let g:floaterm_rootmarkers=['.project', '.git', '.hg', '.svn', '.root', '.gitignore']
 let g:floaterm_gitcommit = 'vsplit'
-nnoremap   <silent>   <localleader>t    :FloatermNew<CR>
-tnoremap   <silent>   <localleader>t    <C-\><C-n>:FloatermNew<CR>
+"nnoremap   <silent>   <localleader>t    :FloatermNew<CR>
+"tnoremap   <silent>   <localleader>t    <C-\><C-n>:FloatermNew<CR>
 nnoremap   <silent>   <   :FloatermToggle<CR>
 tnoremap   <silent>   <   <C-\><C-n>:FloatermToggle<CR>
 
@@ -681,8 +703,8 @@ nnoremap <S-TAB> :bprevious<CR>
 "build
 nnoremap <space>b :CocList tasks<CR>
 " popup
-nmap <Leader>t <Plug>(coc-translator-p)
-vmap <Leader>t <Plug>(coc-translator-pv)
+nmap <localleader>t <Plug>(coc-translator-p)
+vmap <localleader>t <Plug>(coc-translator-pv)
 " echo
 nmap <Leader>e <Plug>(coc-translator-e)
 vmap <Leader>e <Plug>(coc-translator-ev)
