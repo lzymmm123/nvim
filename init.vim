@@ -390,11 +390,24 @@ let g:defx_icons_root_opened_tree_icon = ''
 let g:defx_icons_nested_opened_tree_icon = ''
 let g:defx_icons_nested_closed_tree_icon = ''
 
-"let g:defx_icons_term_colors = {
-"\ 'red': 2
-"\ }
-
-
+let g:defx_icons_term_colors = {
+  \ 'brown'       : 130,
+  \ 'aqua'        : 66,
+  \ 'blue'        : 67,
+  \ 'darkBlue'    : 57,
+  \ 'purple'      : 60,
+  \ 'lightPurple' : 103,
+  \ 'red'         : 131,
+  \ 'beige'       : 137,
+  \ 'yellow'      : 229,
+  \ 'orange'      : 208,
+  \ 'darkOrange'  : 166,
+  \ 'pink'        : 205,
+  \ 'salmon'      : 209,
+  \ 'green'       : 65,
+  \ 'lightGreen'  : 108,
+  \ 'default'       : 'FF0000',
+\ }
 
 "call defx#custom#column('icon', {
 		  "\ 'directory_icon': '▸',
