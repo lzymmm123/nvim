@@ -2,6 +2,15 @@
     "eslint.enable": false,
     "python.jediEnabled": false,
     "explorer.icon.enableNerdfont": true,
+    "latex.build.executable": "latexmk",
+    "latex.build.args": [
+        "-pdf",
+        "-pvc",
+        "-interaction=nonstopmode",
+        "-synctex=1"
+    ],
+    "latex.forwardSearch.executable": "/usr/bin/zathura",
+    "latex.forwardSearch.args": ["--synctex-forward", "%l:1:%f", "%p"],
     "languageserver": {
         "ccls": {
             "command": "ccls",
