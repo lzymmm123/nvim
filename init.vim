@@ -644,7 +644,7 @@ nmap <silent> <leader>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<C
 "nnoremap <silent> <Leader>gh :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 "nnoremap <silent> <Leader>w  :exe 'CocList -I --input='.expand('<cword>').' words'<CR>
 
-let g:coc_global_extensions = ['coc-json','coc-tsserver','coc-yank','coc-translator','coc-tasks','coc-snippets','coc-cmake','coc-lists','coc-python','coc-html']
+let g:coc_global_extensions = ['coc-json','coc-tsserver','coc-yank','coc-translator','coc-tasks','coc-snippets','coc-cmake','coc-lists','coc-python','coc-html','coc-markdownlint']
 
 nnoremap <silent><nowait> <localleader>l :<C-u>CocList<cr>
 nnoremap <silent><nowait> <localleader>lb :<C-u>CocList buffers<cr>
