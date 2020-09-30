@@ -132,6 +132,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'tpope/vim-surround' " type ysks' to wrap the word with '' or type cs'` to change 'word' to `word`
 Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
 Plug 'voldikss/vim-floaterm'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
 
