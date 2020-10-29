@@ -10,11 +10,15 @@
         "-synctex=1"
     ],
     "latex.forwardSearch.executable": "/usr/bin/zathura",
-    "latex.forwardSearch.args": ["--synctex-forward", "%l:1:%f", "%p"],
+    "latex.forwardSearch.args": [
+        "--synctex-forward",
+        "%l:1:%f",
+        "%p"
+    ],
     "snippets.ultisnips.directories": [
-		"$HOME/.config/nvim/Ultisnips/",
-		"$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"
-	],
+        "$HOME/.config/nvim/Ultisnips/",
+        "$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"
+    ],
     "languageserver": {
         "ccls": {
             "command": "ccls",
@@ -37,6 +41,16 @@
                     "directory": "/tmp/ccls"
                 }
             }
+        },
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.mod"
+            ],
+            "disableWorkspaceFolders": true,
+            "filetypes": [
+                "go"
+            ]
         }
     }
 }
