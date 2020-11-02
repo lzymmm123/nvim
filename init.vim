@@ -447,6 +447,9 @@ function! s:defx_mappings() abort
   nnoremap <silent><buffer><expr> mr defx#do_action('execute_command', 'xdg-open .')
   nnoremap <silent><buffer><expr> > defx#do_action('resize', defx#get_context().winwidth - 10)
   nnoremap <silent><buffer><expr> < defx#do_action('resize', defx#get_context().winwidth + 10)
+  nnoremap <silent><buffer><expr> c defx#do_action('copy')
+  nnoremap <silent><buffer><expr> p defx#do_action('paste')
+  nnoremap <silent><buffer><expr> mp defx#do_action('yank_path')
 endfunction
 
 function! s:defx_toggle_tree() abort
