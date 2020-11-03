@@ -443,13 +443,15 @@ function! s:defx_mappings() abort
   nnoremap <silent><buffer><expr> ma defx#do_action('new_file')
   nnoremap <silent><buffer><expr> mt defx#do_action('new_directory')
   nnoremap <silent><buffer><expr> md defx#do_action('remove')
-  nnoremap <silent><buffer><expr> mm defx#do_action('rename')
-  nnoremap <silent><buffer><expr> mr defx#do_action('execute_command', 'xdg-open .')
+  nnoremap <silent><buffer><expr> mr defx#do_action('rename')
+  nnoremap <silent><buffer><expr> mm defx#do_action('execute_command', 'xdg-open .')
   nnoremap <silent><buffer><expr> > defx#do_action('resize', defx#get_context().winwidth - 10)
   nnoremap <silent><buffer><expr> < defx#do_action('resize', defx#get_context().winwidth + 10)
   nnoremap <silent><buffer><expr> c defx#do_action('copy')
   nnoremap <silent><buffer><expr> p defx#do_action('paste')
   nnoremap <silent><buffer><expr> mp defx#do_action('yank_path')
+  nnoremap <silent><buffer><expr> mv defx#do_action('preview')
+  nnoremap <silent><buffer><expr> f defx#do_action('toggle_select')
 endfunction
 
 function! s:defx_toggle_tree() abort
@@ -459,9 +461,6 @@ function! s:defx_toggle_tree() abort
     endif
     return defx#do_action('multi', [['drop']])
 endfunction
-
-
-
 
 
 
