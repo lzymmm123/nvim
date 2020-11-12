@@ -129,6 +129,9 @@ Plug 'mengelbrecht/lightline-bufferline'
 
 " useful tools
 
+"Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Yggdroot/indentLine'
+Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround' " type ysks' to wrap the word with '' or type cs'` to change 'word' to `word`
 Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
 Plug 'voldikss/vim-floaterm'
@@ -806,7 +809,11 @@ nnoremap <silent> <Leader>/ :BLines<CR>
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 
-
+" This selects the next closest text object.
+"map <SPACE> <Plug>(wildfire-fuel)
+"
+" " This selects the previous closest text object.
+"vmap <C-SPACE> <Plug>(wildfire-water)"
 
 
 "nnoremap <Leader>r :call CompileRunGcc()<CR>
