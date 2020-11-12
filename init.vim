@@ -121,7 +121,8 @@ Plug 'skywind3000/asyncrun.vim'
 
 
 " Markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'itchyny/lightline.vim'
@@ -289,8 +290,8 @@ let g:mkdp_open_ip = ''
 
 " specify browser to open preview page
 " default: ''
-" let g:mkdp_browser = 'chromium'
-let g:mkdp_browser = 'surf'
+ let g:mkdp_browser = 'surf'
+"let g:mkdp_browser = 'surf'
 
 " set to 1, echo preview page url in command line when open preview page
 " default is 0
@@ -343,7 +344,7 @@ let g:mkdp_page_title = '「${name}」'
 
 nmap <C-s> <Plug>MarkdownPreview
 nmap <M-s> <Plug>MarkdownPreviewStop
-nmap <C-m> <Plug>MarkdownPreviewToggle
+nmap <C-o> <Plug>MarkdownPreviewToggle
 
 
 let g:table_mode_map_prefix = ' '
