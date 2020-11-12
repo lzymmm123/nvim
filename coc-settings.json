@@ -2,6 +2,43 @@
     "eslint.enable": false,
     "python.jediEnabled": false,
     "explorer.icon.enableNerdfont": true,
+    "explorer.position": "right",
+    "explorer.width": 30,
+    "explorer.previewAction.onHover": false,
+    "explorer.icon.customIcons": {
+        "icons": {
+            "src":{
+                "code": "",
+                "color": "#ff0f0f"
+            },
+            "build":{
+                "code": "",
+                "color": "#ff0f0f"
+            },
+            "so": {
+                "code": "",
+                "color": "#8dc149"
+            },
+            "cmake":{
+                "code":"煉",
+                "color": "#00afaf"
+            }
+        },
+        "extensions": {
+            "so":"so",
+            "cmake":"cmake"
+        },
+        "filenames": {
+            "Makefile":"cmake",
+            "CMakeLists.txt":"cmake"
+        },
+        "dirnames": {
+            "src":"src",
+            "build":"build"
+        },
+        "patternMatches": {},
+        "dirPatternMatches": {}
+    },
     "latex.build.executable": "latexmk",
     "latex.build.args": [
         "-pdf",

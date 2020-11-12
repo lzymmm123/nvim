@@ -145,6 +145,7 @@ function! NearestMethodOrFunction() abort
 endfunction
 
 set termguicolors
+set background=dark
 "let ayucolor="mirage"
 colorscheme nord
 
@@ -650,7 +651,7 @@ nmap <silent> <leader>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<C
 "nnoremap <silent> <Leader>gh :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 "nnoremap <silent> <Leader>w  :exe 'CocList -I --input='.expand('<cword>').' words'<CR>
 
-let g:coc_global_extensions = ['coc-json','coc-tsserver','coc-yank','coc-translator','coc-tasks','coc-snippets','coc-cmake','coc-lists','coc-python','coc-html','coc-markdownlint','coc-texlab']
+let g:coc_global_extensions = ['coc-json','coc-tsserver','coc-yank','coc-translator','coc-tasks','coc-snippets','coc-cmake','coc-lists','coc-python','coc-html','coc-markdownlint','coc-texlab','coc-explorer']
 
 nnoremap <silent><nowait> <localleader>l :<C-u>CocList<cr>
 nnoremap <silent><nowait> <localleader>lb :<C-u>CocList buffers<cr>
@@ -663,6 +664,8 @@ nnoremap <silent><nowait> <localleader>lo :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <localleader>le :<C-u>CocList extensions<cr>
 nnoremap <silent><nowait> <localleader>ls :<C-u>CocList symbols<cr>
 nnoremap <silent><nowait> <localleader>lw :<C-u>CocList words<cr>
+
+nnoremap <silent><nowait> <localleader>e  :<C-u>CocCommand explorer<CR>
 
 
 "floatterm
@@ -771,6 +774,7 @@ let g:coc_explorer_global_presets = {
 \     'file-child-labeling-template': '[fullpath][size][created][modified][accessed][readonly]',
 \   }
 \ }
+let g:indentLine_fileTypeExclude = ['coc-explorer']
 
 "comment
 nmap <localleader>m <plug>NERDCommenterToggle
