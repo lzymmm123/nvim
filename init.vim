@@ -344,7 +344,7 @@ let g:mkdp_page_title = '「${name}」'
 
 nmap <C-s> <Plug>MarkdownPreview
 nmap <M-s> <Plug>MarkdownPreviewStop
-nmap <C-o> <Plug>MarkdownPreviewToggle
+nmap <C-/> <Plug>MarkdownPreviewToggle
 
 
 let g:table_mode_map_prefix = ' '
