@@ -131,6 +131,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 " useful tools
 
 "Plug 'nathanaelkane/vim-indent-guides'
+Plug 'matze/vim-move'
 Plug 'Yggdroot/indentLine'
 Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround' " type ysks' to wrap the word with '' or type cs'` to change 'word' to `word`
@@ -344,7 +345,7 @@ let g:mkdp_page_title = '「${name}」'
 
 nmap <C-s> <Plug>MarkdownPreview
 nmap <M-s> <Plug>MarkdownPreviewStop
-nmap <C-/> <Plug>MarkdownPreviewToggle
+nmap <A-m> <Plug>MarkdownPreviewToggle
 
 
 let g:table_mode_map_prefix = ' '
