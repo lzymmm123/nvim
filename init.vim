@@ -653,7 +653,7 @@ nmap <silent> <leader>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<C
 "nnoremap <silent> <Leader>gh :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 "nnoremap <silent> <Leader>w  :exe 'CocList -I --input='.expand('<cword>').' words'<CR>
 
-let g:coc_global_extensions = ['coc-json','coc-tsserver','coc-yank','coc-translator','coc-tasks','coc-snippets','coc-cmake','coc-lists','coc-python','coc-html','coc-markdownlint','coc-texlab','coc-explorer']
+let g:coc_global_extensions = ['coc-json','coc-tsserver','coc-yank','coc-translator','coc-tasks','coc-snippets','coc-cmake','coc-lists','coc-python','coc-html','coc-markdownlint','coc-texlab','coc-explorer','coc-clangd']
 
 nnoremap <silent><nowait> <localleader>l :<C-u>CocList<cr>
 nnoremap <silent><nowait> <localleader>lb :<C-u>CocList buffers<cr>
@@ -739,6 +739,8 @@ vmap <Leader>r <Plug>(coc-translator-rv)
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <silent> <localleader>f  :<C-u>Vista finder coc<cr>
 nnoremap <silent> <localleader>v  :<C-u>Vista!!<cr>
+
+nnoremap <silent> gh :<C-u>CocCommand clangd.switchSourceHeader<CR>
 
 let g:coc_explorer_global_presets = {
 \   '.vim': {
