@@ -3,6 +3,7 @@
         "line-length": false
     },
     "clangd.compilationDatabasePath": "build",
+    "rust-analyzer.serverPath": "rust-analyzer",
     "python.jediEnabled": false,
     "explorer.icon.enableNerdfont": true,
     "explorer.position": "right",
