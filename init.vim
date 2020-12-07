@@ -80,6 +80,7 @@ au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 "
 "au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
+let g:clever_f_mark_direct_color ="DiffAdd"
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -138,9 +139,11 @@ Plug 'tpope/vim-surround' " type ysks' to wrap the word with '' or type cs'` to 
 Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
 Plug 'voldikss/vim-floaterm'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'rhysd/clever-f.vim'
 call plug#end()
 
 
+let g:clever_f_smart_case = 1
 
 function! NearestMethodOrFunction() abort
   return get(b:, 'vista_nearest_method_or_function', '')
@@ -742,6 +745,7 @@ nnoremap <silent> <localleader>v  :<C-u>Vista!!<cr>
 
 nnoremap <silent> gh :<C-u>CocCommand clangd.switchSourceHeader<CR>
 
+
 let g:coc_explorer_global_presets = {
 \   '.vim': {
 \     'root-uri': '~/.vim',
@@ -868,3 +872,4 @@ func! CompileRunGcc()
 		:term go run .
 	endif
 endfunc
+set runtimepath^=~/Code/LUA/nvim

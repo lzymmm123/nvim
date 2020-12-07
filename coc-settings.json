@@ -1,4 +1,7 @@
 {
+    "markdownlint.config": {
+        "line-length": false
+    },
     "clangd.compilationDatabasePath": "build",
     "python.jediEnabled": false,
     "explorer.icon.enableNerdfont": true,
@@ -39,14 +42,17 @@
         "patternMatches": {},
         "dirPatternMatches": {}
     },
-    "latex.build.executable": "latexmk",
+    "texlab.path": "texlab",
+    "latex.build.executable":" latexmk",
     "latex.build.args": [
         "-pdf",
         "-pvc",
+        "-xelatex",
         "-interaction=nonstopmode",
-        "-synctex=1"
+        "-synctex=1",
+        "%f"
     ],
-    "latex.forwardSearch.executable": "/usr/bin/zathura",
+    "latex.forwardSearch.executable": "zathura",
     "latex.forwardSearch.args": [
         "--synctex-forward",
         "%l:1:%f",
